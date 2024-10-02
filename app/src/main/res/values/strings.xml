@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Desarrollo-Mobile_TP-Integrador</string>
+
+    <string-array name="tipos_de_inversion">
+        <item>Plazo fijo</item>
+        <item>Fondo común de inversión</item>
+    </string-array>
+</resources>
