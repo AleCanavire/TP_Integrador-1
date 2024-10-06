@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -39,22 +38,26 @@
             android:id="@+id/monto_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Monto"/>
+            android:hint="Monto"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/tasa_interes_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tasa de interés"/>
+            android:hint="Tasa de interés"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/plazo_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Plazo"/>
+            android:hint="Plazo"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/entidad_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entidad"/>
+            android:hint="Entidad"
+            android:inputType="text"/>
         <Spinner
             android:id="@+id/tipo_inversion_1"
             android:layout_width="match_parent"
@@ -77,22 +80,26 @@
             android:id="@+id/monto_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Monto"/>
+            android:hint="Monto"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/tasa_interes_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tasa de interés"/>
+            android:hint="Tasa de interés"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/plazo_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Plazo"/>
+            android:hint="Plazo"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/entidad_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entidad"/>
+            android:hint="Entidad"
+            android:inputType="text"/>
         <Spinner
             android:id="@+id/tipo_inversion_2"
             android:layout_width="match_parent"

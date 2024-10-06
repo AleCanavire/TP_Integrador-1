@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class DatosActivity : AppCompatActivity(){
@@ -40,7 +41,34 @@ class DatosActivity : AppCompatActivity(){
             tipo_inversion_2.adapter = adapter
         }
 
-        home.setOnClickListener{ cambiarVista(this,MainActivity()) }
+        val CALCULAR_CONTEXT = getSharedPreferences("CALCULAR_CONTEXT", Context.MODE_PRIVATE)
+
+        home.setOnClickListener{ cambiarVista(this, MainActivity()) }
+
+        calcular.setOnClickListener{
+
+            if(monto_1.isNotEmpty() && tasa_interes_1.isNotEmpty() && plazo_1.isNotEmpty() && entidad_1.isNotEmpty()){
+                CALCULAR_CONTEXT.edit().apply{
+                    putInt("MONTO_1", monto_1.toString().toInt())
+                    putInt("TASA_DE_INTERES_1", tasa_interes_1.toString().toInt())
+                    putInt("PLAZO_1", plazo_1.toString().toInt())
+                    putString("ENTIDAD_1", entidad_1.toString())
+                    putString("TIPO_DE_INVERSION_1", tipo_inversion_1.selectedItem.toString())
+
+                    putInt("MONTO_2", monto_2.toString().toInt())
+                    putInt("TASA_DE_INTERES_2", tasa_interes_2.toString().toInt())
+                    putInt("PLAZO_2", plazo_2.toString().toInt())
+                    putString("ENTIDAD_2", entidad_2.toString())
+                    putString("TIPO_DE_INVERSION_2", tipo_inversion_2.selectedItem.toString())
+
+                    apply()
+                }
+
+                cambiarVista(this, RendimientoActivity())
+            } else {
+                Toast.makeText(this, "Uno de los campos esta vacio", Toast.LENGTH_LONG).show()
+            }
+        }
 
     }
     private fun cambiarVista(context: Context, activity: AppCompatActivity){
