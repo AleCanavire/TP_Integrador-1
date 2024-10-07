@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:layout_marginBottom="30dp"
+        android:text="¡Bienvenido, nombre!"/>
+
+    <Button
+        android:id="@+id/ingresar_datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Ingresar datos de inversión"/>
+    <Button
+        android:id="@+id/historial_comparaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Historial de comparaciones"/>
+    <Button
+        android:id="@+id/politicas_terminos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Políticas y términos"/>
+
+</LinearLayout>
