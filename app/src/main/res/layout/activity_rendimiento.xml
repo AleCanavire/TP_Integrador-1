@@ -16,9 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textColor="#ffffff"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:text="Comparación de rendimientos"/>
 
     <LinearLayout
@@ -32,9 +32,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="#ffffff"
-            android:text="Inversión 1"/>
+            android:text="Inversión N°1"/>
 
         <TextView
             android:id="@+id/entidad_1"
@@ -42,14 +42,14 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:text="TNA: "/>
+            android:text="Entidad: "/>
         <TextView
             android:id="@+id/tipo_inversion_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:text="TNA: "/>
+            android:text="Tipo de inversión: "/>
         <TextView
             android:id="@+id/tna_1"
             android:layout_width="match_parent"
@@ -93,9 +93,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="#ffffff"
-            android:text="Inversión 2"/>
+            android:text="Inversión N°2"/>
 
         <TextView
             android:id="@+id/entidad_2"
@@ -103,14 +103,14 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:text="TNA: "/>
+            android:text="Entidad: "/>
         <TextView
             android:id="@+id/tipo_inversion_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:text="TNA: "/>
+            android:text="Tipo de inversión: "/>
         <TextView
             android:id="@+id/tna_2"
             android:layout_width="match_parent"
@@ -143,6 +143,15 @@
             android:text="Rendimiento: "/>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/recomendacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:text="Recomendamos ir por la inversión N°"/>
+    
     <Button
         android:id="@+id/home"
         android:layout_width="match_parent"

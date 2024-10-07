@@ -43,7 +43,9 @@ class DatosActivity : AppCompatActivity(){
 
         val CALCULAR_CONTEXT = getSharedPreferences("CALCULAR_CONTEXT", Context.MODE_PRIVATE)
 
-        home.setOnClickListener{ cambiarVista(this, MainActivity()) }
+        val HISTORIAL_CONTEXT = getSharedPreferences("HISTORIAL_CONTEXT", Context.MODE_PRIVATE)
+
+        home.setOnClickListener{ cambiarVista(this, HomeActivity()) }
 
         calcular.setOnClickListener{
 
@@ -63,6 +65,9 @@ class DatosActivity : AppCompatActivity(){
 
                     apply()
                 }
+
+                val n_comparaciones = HISTORIAL_CONTEXT.getInt("n_comparaciones", 0)
+                HISTORIAL_CONTEXT.edit().putInt("n_comparaciones", n_comparaciones + 1).apply()
 
                 cambiarVista(this, RendimientoActivity())
             } else {

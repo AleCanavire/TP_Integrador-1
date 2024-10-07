@@ -3,7 +3,6 @@ package com.ifts18.desarrollo_mobile_tp_integrador
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -27,8 +26,10 @@ class RendimientoActivity : AppCompatActivity(){
         val capital_final_2 = findViewById<TextView>(R.id.capital_final_2)
         val rendimiento_2 = findViewById<TextView>(R.id.rendimiento_2)
 
+        val recomendacion = findViewById<TextView>(R.id.recomendacion)
+
         val home = findViewById<Button>(R.id.home)
-        home.setOnClickListener{ cambiarVista(this, MainActivity()) }
+        home.setOnClickListener{ cambiarVista(this, HomeActivity()) }
 
         val CALCULAR_CONTEXT = getSharedPreferences("CALCULAR_CONTEXT", Context.MODE_PRIVATE)
 
@@ -44,8 +45,8 @@ class RendimientoActivity : AppCompatActivity(){
         val CAPITAL_FINAL_1 = CAPITAL_INICIAL_1 + RENDIMIENTO_1.toFloat()
         val ROI_1 = "%.2f".format((CAPITAL_FINAL_1 - CAPITAL_INICIAL_1) / CAPITAL_INICIAL_1 * 100)
 
-        entidad_1.text = ENTIDAD_1
-        tipo_inversion_1.text = TIPO_DE_INVERSION_1
+        entidad_1.text = "Entidad: $ENTIDAD_1"
+        tipo_inversion_1.text = "Tipo de inversión: $TIPO_DE_INVERSION_1"
         tna_1.text = "TNA: ${TASA_DE_INTERES_1}%"
         capital_inicial_1.text = "Capital inicial: $$CAPITAL_INICIAL_1"
         capital_final_1.text = "Capital final: $$CAPITAL_FINAL_1"
@@ -70,9 +71,26 @@ class RendimientoActivity : AppCompatActivity(){
         capital_final_2.text = "Capital final: $$CAPITAL_FINAL_2"
         rendimiento_2.text = "Rendimiento: $$RENDIMIENTO_2 ($ROI_2%)"
 
+        lateinit var recomendacion_resultado: String
+        if (ROI_1 > ROI_2){
+            recomendacion_resultado = "Recomendamos ir por la inversión N°1, ya que tiene un porcentaje de rendimiento mayor."
+        } else if (ROI_1 < ROI_2){
+            recomendacion_resultado = "Recomendamos ir por la inversión N°2, ya que tiene un porcentaje de rendimiento mayor."
+        }
+
+        recomendacion.text = recomendacion_resultado
 
         val HISTORIAL_CONTEXT = getSharedPreferences("HISTORIAL_CONTEXT", Context.MODE_PRIVATE)
+        val n_comparaciones = HISTORIAL_CONTEXT.getInt("n_comparaciones", 0)
+
+        HISTORIAL_CONTEXT.edit().putString("comparacion_$n_comparaciones",
+            "COMPARACIÓN N°$n_comparaciones\n" +
+            "Entidad: $ENTIDAD_1 - Tipo de inversión: $TIPO_DE_INVERSION_1 - TNA: ${TASA_DE_INTERES_1}%  - Capital inicial: $CAPITAL_INICIAL_1 - Capital final: $CAPITAL_FINAL_1 - Rendimiento: \$$RENDIMIENTO_1 ($ROI_1%)\n" +
+            "Entidad: $ENTIDAD_2 - Tipo de inversión: $TIPO_DE_INVERSION_2 - TNA: ${TASA_DE_INTERES_2}%  - Capital inicial: $CAPITAL_INICIAL_2 - Capital final: $CAPITAL_FINAL_2 - Rendimiento: $RENDIMIENTO_2 ($ROI_2%)\n" +
+            "$recomendacion_resultado"
+        ).apply()
     }
+
     private fun cambiarVista(context: Context, activity: AppCompatActivity){
         val intent = Intent(context, activity::class.java )
         startActivity(intent)
