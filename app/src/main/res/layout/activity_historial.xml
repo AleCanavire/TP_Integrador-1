@@ -9,7 +9,7 @@
     android:paddingVertical="25dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#72BF78"
+    android:background="#005F86"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,17 +18,18 @@
         android:textAlignment="center"
         android:textSize="25sp"
         android:textColor="#ffffff"
+        android:textStyle="bold"
         android:text="Historial de comparaciones"/>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         android:layout_marginTop="15dp">
         <LinearLayout
             android:id="@+id/historial_comparaciones"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         </LinearLayout>
     </ScrollView>
@@ -39,6 +40,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#A0D683"
+        android:backgroundTint="#057EA3"
         android:text="Volver al Home"/>
+
 </LinearLayout>

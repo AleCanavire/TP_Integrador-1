@@ -9,7 +9,7 @@
     android:paddingVertical="25dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#72BF78"
+    android:background="#005F86"
     tools:context=".MainActivity">
 
     <TextView
@@ -27,7 +27,7 @@
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        android:background="#A0D683">
+        android:background="#057EA3">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        android:background="#A0D683">
+        android:background="#057EA3">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -148,16 +148,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:text="Recomendamos ir por la inversión N°"/>
-    
+
     <Button
         android:id="@+id/home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#A0D683"
+        android:backgroundTint="#057EA3"
         android:text="Volver al Home"/>
 </LinearLayout>

@@ -9,46 +9,63 @@
     android:orientation="vertical"
     android:paddingHorizontal="50dp"
     android:paddingVertical="25dp"
+    android:background="#005F86"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:textSize="25sp"
+        android:textSize="30sp"
+        android:paddingBottom="20dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:text="TEST DEL INVERSOR" />
 
     <LinearLayout
         android:id="@+id/datos_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#057EA3"
+        android:padding="30dp"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
             android:hint="Nombre"
             android:inputType="text" />
         <EditText
             android:id="@+id/apellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="15dp"
             android:hint="Apellido"
             android:inputType="text" />
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
             android:hint="Email"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:inputType="textEmailAddress" />
 
         <Button
             android:id="@+id/enviar"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Enviar" />
+            android:backgroundTintMode="add"
+            android:backgroundTint="#005F86"
+            android:textSize="20sp"
+            android:text="Siguiente" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -56,13 +73,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="#005F86"
+        android:padding="10dp"
         android:visibility="gone">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/pregunta_edad"
-            android:textSize="16dp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
         <RadioGroup
             android:id="@+id/edadOpciones"
             android:layout_width="wrap_content"
@@ -70,19 +90,24 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A. Menos de 25 años." />
+                android:buttonTint="#FFFFFF"
+                android:text="A. Menos de 25 años."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="B. De 25 a 35 años." />
+                android:text="B. De 25 a 35 años."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C. De 36 a 55 años." />
+                android:text="C. De 36 a 55 años."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="D. De 56 años o más." />
+                android:text="D. De 56 años o más."
+                android:textColor="#FFFFFF"/>
         </RadioGroup>
 
         <TextView
@@ -90,7 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/experiencia_inversion"
-            android:textSize="16dp" />
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"/>
         <RadioGroup
             android:id="@+id/inversionExp"
             android:layout_width="wrap_content"
@@ -98,19 +124,23 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A. Ninguna." />
+                android:text="A. Ninguna."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="B. Baja." />
+                android:text="B. Baja."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C. Media." />
+                android:text="C. Media."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="D. Alta." />
+                android:text="D. Alta."
+                android:textColor="#FFFFFF"/>
         </RadioGroup>
 
         <TextView
@@ -118,7 +148,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="¿Cuánto tiempo conservarías esta inversión?"
-            android:textSize="16dp" />
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"/>
         <RadioGroup
             android:id="@+id/tiempo_inversion"
             android:layout_width="wrap_content"
@@ -126,26 +157,34 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A. Menos de 180 días." />
+                android:text="A. Menos de 180 días."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="B. Entre 180 días y 1 año" />
+                android:text="B. Entre 180 días y 1 año"
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C. De 1 a 2 años." />
+                android:text="C. De 1 a 2 años."
+                android:textColor="#FFFFFF"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="D. Más de 2 años." />
+                android:text="D. Más de 2 años."
+                android:textColor="#FFFFFF"/>
         </RadioGroup>
 
         <Button
             android:id="@+id/enviar_test"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:backgroundTintMode="add"
+            android:backgroundTint="#057EA3"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
             android:text="Enviar" />
     </LinearLayout>
 

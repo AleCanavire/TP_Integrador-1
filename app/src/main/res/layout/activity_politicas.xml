@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,13 +7,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="50dp"
+        android:background="#005F86"
+        android:paddingHorizontal="25dp"
         android:paddingVertical="25dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
@@ -21,53 +24,72 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/subtitulo1"/>
+            android:textStyle="bold"
+            android:text="@string/subtitulo1"
+            android:textColor="@color/white"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:text="@string/parrafo1" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="@string/subtitulo2"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:text="@string/parrafo2"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="@string/subtitulo3"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:text="@string/parrafo3"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="@string/subtitulo4"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:text="@string/parrafo4" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="@string/subtitulo5"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:text="@string/parrafo5"/>
 
         <Button
             android:id="@+id/atras"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTintMode="add"
+            android:backgroundTint="#057EA3"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
             android:text="VOLVER" />
 
     </LinearLayout>

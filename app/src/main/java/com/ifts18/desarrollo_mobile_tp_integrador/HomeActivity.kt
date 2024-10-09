@@ -21,12 +21,14 @@ class HomeActivity : AppCompatActivity() {
         historial_comparaciones.setOnClickListener{ cambiarVista(this, HistorialActivity()) }
         politicas_terminos.setOnClickListener{ cambiarVista(this, PoliticasActivity()) }
 
+        // Recuperamos los datos nombre y apellido del archivo de preferencias
         val primera_vez = getSharedPreferences("primera_vez", Context.MODE_PRIVATE)
         val nombre_almacenado = primera_vez.getString("nombre", "")
         val apellido_almacenado = primera_vez.getString("apellido", "")
+        val email_almacenado = primera_vez.getString("email", "")
 
-        // Recuperamos los datos nombre y apellido del archivo de preferencias
-        bienvenido.text = "Bienvenido, ${nombre_almacenado} ${apellido_almacenado}"
+        bienvenido.text = "Bienvenido ${nombre_almacenado} ${apellido_almacenado} \n${email_almacenado}"
+
         politicas_terminos.setOnClickListener {
             cambiarVista(this, PoliticasActivity())
         }

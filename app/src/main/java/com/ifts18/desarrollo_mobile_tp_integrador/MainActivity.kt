@@ -3,6 +3,7 @@ package com.ifts18.desarrollo_mobile_tp_integrador
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val titulo = findViewById<TextView>(R.id.titulo)
         val datos_usuario = findViewById<LinearLayout>(R.id.datos_usuario)
         val nombre_usuario = findViewById<EditText>(R.id.nombre)
         val apellido_usuario = findViewById<EditText>(R.id.apellido)
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
         }
 
+        // Primer boton que verifica que los campos no esten vacios y avanza a la siguiente pantalla
         enviar_datos.setOnClickListener {
             // Verificamos que los datos no esten vacios
             val nombre = nombre_usuario.text.toString()
@@ -47,10 +50,16 @@ class MainActivity : AppCompatActivity() {
             // Verificamos que se haya seleccionado una opcion en cada pregunta
             if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty()) {
                 Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
+            } else if (email.isNotEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Por favor, ingrese un email valido", Toast.LENGTH_SHORT).show()
             } else {
                 // Cambiamos de vista dentro de la misma pantalla
+
+                //Ocultamos el primer campo y mostramos el segundo
                 datos_usuario.visibility = LinearLayout.GONE
                 test_inversor.visibility = LinearLayout.VISIBLE
+                // Ocultamos el titulo de la pantalla
+                titulo.visibility = LinearLayout.GONE
             }
         }
 
@@ -66,9 +75,15 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // Guardamos los datos en el archivo de preferencias
                 primera_vez.edit().apply{
+                    // Cambiamos el estado de primera vez a true
                     putBoolean("es_primera_vez", true)
+
+                    // Guardamos los datos del usuario
                     putString("nombre", nombre_usuario.text.toString())
                     putString("apellido", apellido_usuario.text.toString())
+                    putString("email", email_usuario.text.toString())
+
+                    // Aplicamos los cambios
                     apply()
                 }
 

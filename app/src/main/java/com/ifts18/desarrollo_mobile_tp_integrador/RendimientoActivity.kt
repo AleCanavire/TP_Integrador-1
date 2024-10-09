@@ -64,8 +64,8 @@ class RendimientoActivity : AppCompatActivity(){
         val CAPITAL_FINAL_2 = CAPITAL_INICIAL_2 + RENDIMIENTO_2.toFloat()
         val ROI_2 = "%.2f".format((CAPITAL_FINAL_2 - CAPITAL_INICIAL_2) / CAPITAL_INICIAL_2 * 100)
 
-        entidad_2.text = ENTIDAD_2
-        tipo_inversion_2.text = TIPO_DE_INVERSION_2
+        entidad_2.text = "Entidad: $ENTIDAD_2"
+        tipo_inversion_2.text = "Tipo de inversión: $TIPO_DE_INVERSION_2"
         tna_2.text = "TNA: ${TASA_DE_INTERES_2}%"
         capital_inicial_2.text = "Capital inicial: $$CAPITAL_INICIAL_2"
         capital_final_2.text = "Capital final: $$CAPITAL_FINAL_2"
@@ -76,6 +76,8 @@ class RendimientoActivity : AppCompatActivity(){
             recomendacion_resultado = "Recomendamos ir por la inversión N°1, ya que tiene un porcentaje de rendimiento mayor."
         } else if (ROI_1 < ROI_2){
             recomendacion_resultado = "Recomendamos ir por la inversión N°2, ya que tiene un porcentaje de rendimiento mayor."
+        } else{
+            recomendacion_resultado = "Recomendamos invertir en ambas, ya que tienen el mismo porcentaje de rendimiento."
         }
 
         recomendacion.text = recomendacion_resultado
@@ -85,9 +87,9 @@ class RendimientoActivity : AppCompatActivity(){
 
         HISTORIAL_CONTEXT.edit().putString("comparacion_$n_comparaciones",
             "COMPARACIÓN N°$n_comparaciones\n" +
-            "Entidad: $ENTIDAD_1 - Tipo de inversión: $TIPO_DE_INVERSION_1 - TNA: ${TASA_DE_INTERES_1}%  - Capital inicial: $CAPITAL_INICIAL_1 - Capital final: $CAPITAL_FINAL_1 - Rendimiento: \$$RENDIMIENTO_1 ($ROI_1%)\n" +
-            "Entidad: $ENTIDAD_2 - Tipo de inversión: $TIPO_DE_INVERSION_2 - TNA: ${TASA_DE_INTERES_2}%  - Capital inicial: $CAPITAL_INICIAL_2 - Capital final: $CAPITAL_FINAL_2 - Rendimiento: $RENDIMIENTO_2 ($ROI_2%)\n" +
-            "$recomendacion_resultado"
+                    "Entidad: $ENTIDAD_1 - Tipo de inversión: $TIPO_DE_INVERSION_1 - TNA: ${TASA_DE_INTERES_1}%  - Capital inicial: $CAPITAL_INICIAL_1 - Capital final: $CAPITAL_FINAL_1 - Rendimiento: $RENDIMIENTO_1 ($ROI_1%)\n" +
+                    "Entidad: $ENTIDAD_2 - Tipo de inversión: $TIPO_DE_INVERSION_2 - TNA: ${TASA_DE_INTERES_2}%  - Capital inicial: $CAPITAL_INICIAL_2 - Capital final: $CAPITAL_FINAL_2 - Rendimiento: $RENDIMIENTO_2 ($ROI_2%)\n" +
+                    "$recomendacion_resultado"
         ).apply()
     }
 

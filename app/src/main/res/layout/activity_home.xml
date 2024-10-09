@@ -9,6 +9,7 @@
     android:paddingVertical="25dp"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#005F86"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,26 +17,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:layout_marginBottom="30dp"
-        android:text="¡Bienvenido, nombre!"/>
+        android:text="Bienvenido"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/ingresar_datos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:backgroundTintMode="add"
+        android:backgroundTint="#057EA3"
+        android:textSize="20sp"
         android:layout_marginBottom="5dp"
         android:text="Ingresar datos de inversión"/>
     <Button
         android:id="@+id/historial_comparaciones"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:backgroundTintMode="add"
+        android:backgroundTint="#057EA3"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"
         android:text="Historial de comparaciones"/>
     <Button
         android:id="@+id/politicas_terminos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:backgroundTintMode="add"
+        android:backgroundTint="#057EA3"
+        android:textSize="20sp"
         android:text="Políticas y términos"/>
 
 </LinearLayout>

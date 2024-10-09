@@ -11,9 +11,9 @@ class PoliticasActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_politicas)
 
-        val btAtras = findViewById<Button>(R.id.atras)
+        val atras = findViewById<Button>(R.id.atras)
 
-        btAtras.setOnClickListener {
+        atras.setOnClickListener {
             cambiarVista(this, HomeActivity())
         }
     }

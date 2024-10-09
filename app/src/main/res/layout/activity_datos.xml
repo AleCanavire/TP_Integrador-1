@@ -9,7 +9,7 @@
     android:paddingVertical="25dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#72BF78"
+    android:background="#005F86"
     tools:context=".MainActivity">
 
     <TextView
@@ -19,6 +19,7 @@
         android:textAlignment="center"
         android:layout_marginBottom="15dp"
         android:textColor="#ffffff"
+        android:textStyle="bold"
         android:text="Datos de Inversión"/>
 
     <LinearLayout
@@ -27,7 +28,7 @@
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        android:background="#A0D683">
+        android:background="#057EA3">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,30 +39,43 @@
             android:id="@+id/monto_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Monto"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Monto (en pesos)"
             android:inputType="number"/>
         <EditText
             android:id="@+id/tasa_interes_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tasa de interés"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Tasa de interés (%)"
             android:inputType="number"/>
         <EditText
             android:id="@+id/plazo_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Plazo"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Plazo (en días)"
             android:inputType="number"/>
         <EditText
             android:id="@+id/entidad_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:hint="Entidad"
             android:inputType="text"/>
         <Spinner
             android:id="@+id/tipo_inversion_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,7 +83,7 @@
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        android:background="#A0D683">
+        android:background="#057EA3">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,46 +94,60 @@
             android:id="@+id/monto_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Monto"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Monto (en pesos)"
             android:inputType="number"/>
         <EditText
             android:id="@+id/tasa_interes_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tasa de interés"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Tasa de interés (%)"
             android:inputType="number"/>
         <EditText
             android:id="@+id/plazo_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Plazo"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Plazo (en días)"
             android:inputType="number"/>
         <EditText
             android:id="@+id/entidad_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:hint="Entidad"
             android:inputType="text"/>
         <Spinner
             android:id="@+id/tipo_inversion_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/calcular"
-        android:layout_width="match_parent"
+        android:layout_width="490dp"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:backgroundTint="#A0D683"
+        android:textSize="20dp"
+        android:backgroundTint="#057EA3"
         android:text="Calcular"/>
 
     <Button
         android:id="@+id/home"
-        android:layout_width="match_parent"
+        android:layout_width="490dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#A0D683"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#057EA3"
         android:text="Volver al Home"/>
+
 </LinearLayout>
